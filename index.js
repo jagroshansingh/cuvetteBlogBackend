@@ -10,12 +10,12 @@ app.use(express.json())
 
 app.use('/auth',AuthRouter)
 
-app.listen(process.env.PORT,async()=>{
+app.listen(8088,async()=>{
     try {
         await connection;
         console.log('Database is connected successfully')
     } catch (error) {
         console.log(err)
     }
-    console.log(`Server is running at port ${process.env.PORT}`)
+    console.log(`Server is running at port 8088`)
 })
