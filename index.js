@@ -7,7 +7,9 @@ require('dotenv').config();
 
 app.use(cors())
 app.use(express.json())
-
+app.get('/',(req,res)=>{
+    res.status(200).json({msg:'All good'})
+})
 app.use('/auth',AuthRouter)
 
 app.listen(8088,async()=>{
